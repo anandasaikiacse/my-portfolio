@@ -1,0 +1,110 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background: #f9f9f9;
+  color: #333;
+  padding: 0;
+}
+
+/* Header */
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #2c3e50;
+  color: #fff;
+  padding: 1rem 2rem;
+  flex-wrap: wrap;
+}
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+/* Clock Container */
+.clock-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Analog Clock */
+.analog-clock {
+  width: 60px;
+  height: 60px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  position: relative;
+}
+.clock-face {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.hand {
+  position: absolute;
+  background: #fff;
+  top: 50%;
+  left: 50%;
+  transform-origin: 0% 0%;
+  transform: rotate(90deg);
+}
+.hour {
+  width: 25%;
+  height: 3px;
+}
+.minute {
+  width: 35%;
+  height: 2px;
+}
+.second {
+  width: 45%;
+  height: 1.5px;
+  background: red;
+}
+.hand-transition {
+  transition: transform 0.06s ease-in-out;
+}
+
+/* Digital Clock */
+.digital-clock {
+  font-size: 1rem;
+}
+
+/* Main Sections */
+main {
+  padding: 2rem;
+}
+section {
+  margin-bottom: 2rem;
+}
+h2 {
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background: #2c3e50;
+  color: #fff;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .top-nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .clock-container {
+    margin-top: 1rem;
+  }
+}
